@@ -8,7 +8,7 @@ file = os.path.exists('data.json')
 
 if file:
 	print("JSON file available ...")
-	with open('app.json', 'r') as f:
+	with open(file, 'r') as f:
 		data = json.load(f)
 else:
 	print("Trying to get from env")
