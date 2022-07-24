@@ -1,0 +1,22 @@
+{
+	"datas": [
+		{
+			"proc": "web",
+			"app": {
+				"api_a":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+				"name_a":"app1_a",
+				"api_b":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+				"name_b":"app1_b"
+			}
+		},
+		{
+			"proc": "web",
+			"app": {
+				"api_a":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+				"name_a":"app2_a",
+				"api_b":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+				"name_b":"app2_b"
+			}
+		}
+	]
+}
