@@ -3,10 +3,7 @@
 import json, time, os, heroku3, os.path
 from datetime import datetime
 
-file = os.path.exists('data.json')
-
-
-if file:
+if file := os.path.exists('data.json'):
 	print("JSON file available ...")
 	with open(file, 'r') as f:
 		data = json.load(f)
@@ -18,15 +15,14 @@ else:
 
 
 def changeDyno(apikey, appname, proc, typ):
-    try:
-        hcon = heroku3.from_key(apikey)
-        app = hcon.app(appname)
-        print("Scaling app, please wait ...")
-        app.process_formation()[proc].scale(int(typ))
-        print("Scale successfully")
-    except Exception as e:
-        pass
-        print(e)
+	try:
+		hcon = heroku3.from_key(apikey)
+		app = hcon.app(appname)
+		print("Scaling app, please wait ...")
+		app.process_formation()[proc].scale(int(typ))
+		print("Scale successfully")
+	except Exception as e:
+		print(e)
 
 
 today = datetime.now()
